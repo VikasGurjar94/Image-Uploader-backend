@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Image uploader</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Image uploader</h1>
+        <form method="post" enctype="multipart/form-data" action="/form-submit">
+            <div class="input">
+                <h3>Upload Image : </h3>
+                <input type="file" accept="image" name="uplodedImg" >
+            </div>
+            <% if(url) { %>
+            <div class="output">
+                <img src=<%= url %> alt="uploaded Image">
+            </div>
+            <% } %>
+
+            <button type="submit">Upload</button>
+
+        </form>
+    </div>
+</body>
+</html>
