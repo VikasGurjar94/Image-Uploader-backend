@@ -12,7 +12,7 @@
         <form method="post" enctype="multipart/form-data" action="/form-submit">
             <div class="input">
                 <h3>Upload Image : </h3>
-                <input type="file" accept="image" name="uplodedImg" >
+                <input type="file" id="uploadInput" accept="image/png " name="uploadedImg" >
             </div>
             <% if(url) { %>
             <div class="output">
@@ -20,9 +20,14 @@
             </div>
             <% } %>
 
-            <button type="submit">Upload</button>
+            <button id="submit-btn" type="submit">Upload</button>
+            <button type="reset" id="reset-btn">
+                <a href="http://localhost:1000/">Reset</a>
+            </button>
 
         </form>
     </div>
+
+    <script  src="/scripts/script.js"></script>
 </body>
 </html>
